@@ -2,10 +2,15 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.headerText = props.headerText;
+  }
+
   render() {
     return (
       <View style={styles.viewStyle}>
-        <Text style={styles.textStyle}>Albums!</Text>
+        <Text style={styles.textStyle}>{this.headerText}</Text>
       </View>
     );
   }
